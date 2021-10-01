@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour //, IPooledObject
+public class PlayerController : MonoBehaviour
 {
     private float speed = 5f;
 
@@ -16,11 +16,6 @@ public class PlayerController : MonoBehaviour //, IPooledObject
     {
         body = GetComponent<Rigidbody>();
     }
-
-    //public void OnObjectSpawn()
-    //{
-       
-    //}
 
     private void Update()
     {

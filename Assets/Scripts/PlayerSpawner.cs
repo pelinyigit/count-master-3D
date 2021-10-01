@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using EZObjectPools;
 
 public class PlayerSpawner : MonoBehaviour
 {
-    ObjectPooler objectPooler;
+    public EZObjectPool myPool;
+
+    private float spawnTime = 0.1f;
 
     private void Start()
     {
-        objectPooler = ObjectPooler.Instance;
+        InvokeRepeating("SpawnObject", spawnTime, spawnTime);
     }
 
-    void FixedUpdate()
+    void SpawnObject()
     {
-        objectPooler.SpawnFromPool("Player", transform.position, Quaternion.identity);
+        myPool.TryGetNextObject(transform.position, transform.rotation);
     }
 }
