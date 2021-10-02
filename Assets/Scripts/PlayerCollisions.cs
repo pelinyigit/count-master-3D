@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class PlayerCollisions : MonoBehaviour
 {
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Enemy")
         {
-            Destroy(this.gameObject);
-            Destroy(other.gameObject);
+
+            this.gameObject.SetActive(false);
+            other.gameObject.SetActive(false);
 
         } else if (other.tag == "Obstacle")
         {
-            Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
         }
     }
 }
