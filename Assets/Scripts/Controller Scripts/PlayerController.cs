@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         body = GetComponent<Rigidbody>();
+
     }
 
     private void Update()
