@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyCollision : MonoBehaviour
+public class PlayerCollisions : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
@@ -10,6 +10,10 @@ public class EnemyCollision : MonoBehaviour
         {
             Destroy(this.gameObject);
             Destroy(other.gameObject);
+
+        } else if (other.tag == "Obstacle")
+        {
+            Destroy(this.gameObject);
         }
     }
 }
