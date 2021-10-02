@@ -18,7 +18,6 @@ public class PlayerSpawner : MonoBehaviour
     }
     private void Start()
     {
-    
         InvokeRepeating("SpawnObject", spawnTime, spawnTime);
     }
 
@@ -28,6 +27,7 @@ public class PlayerSpawner : MonoBehaviour
         spawner.SetActive(true);
         pool.SetActive(true);
         myPool.TryGetNextObject(transform.position, transform.rotation);
+
     }
 
 }
