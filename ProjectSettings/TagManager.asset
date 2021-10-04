@@ -19,8 +19,8 @@ TagManager:
   - Player
   - Wall
   - PlayerParent
-  - 
-  - 
+  - Enemy
+  - Obstacle
   - 
   - 
   - 
