@@ -8,12 +8,9 @@ public class SizeCounter : MonoBehaviour
 
     [HideInInspector]
     public int playerSize;
-  
-  
+   
     void Size()
     {
       playerSize = playerParent.transform.childCount;
-    }
- 
-   
+    }  
 }

@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - Obstacle
   - PlayerParent
+  - Enemies2
+  - Enemies1
   layers:
   - Default
   - TransparentFX
