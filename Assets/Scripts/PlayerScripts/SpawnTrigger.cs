@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class SpawnTrigger : MonoBehaviour
 {
-    public PlayerSpawner spawnerObj;
-
+    public Spawner spawnerObj;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Wall")
         {
-            spawnerObj.SpawnObject();
+            spawnerObj.spawner.SetActive(true);
         }
     }
 }
